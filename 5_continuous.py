@@ -125,7 +125,7 @@ import numpy as np  # If you haven't used numpy before, it contains a bunch of o
 # Also install the openAI gym `pip install gym`, which contains a bunch of fun machine learning tasks, of which we will be using a stick-balancing exercise:
 import gym
 import resources.mountainCar
-env = gym.make('Acrobot-v1')
+env = gym.make('CartPole-v0')
 
 numStateVariables = env.observation_space.shape[0]
 numActions = env.action_space.n
@@ -260,7 +260,7 @@ sampleCache = {
     "nextStates": [],
     "dones": []
 }
-if False:
+if True:
     for currentRound in range(totalRounds):
         currentState = env.reset().astype(np.float32)  # reset the universe
         thisRoundReward = 0
@@ -346,7 +346,7 @@ sampleCount=0
 last100RoundsRewards=[]
 trainingsSoFar=0
 
-if True:
+if False:
     for currentRound in range(totalRounds):
         currentState = env.reset().astype(np.float32)  # reset the universe
         thisRoundReward = 0

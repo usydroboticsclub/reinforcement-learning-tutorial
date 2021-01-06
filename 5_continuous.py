@@ -124,7 +124,6 @@ import numpy as np  # If you haven't used numpy before, it contains a bunch of o
 ################## 1. Create the environment ###############
 # Also install the openAI gym `pip install gym`, which contains a bunch of fun machine learning tasks, of which we will be using a stick-balancing exercise:
 import gym
-import resources.mountainCar
 env = gym.make('CartPole-v0')
 
 numStateVariables = env.observation_space.shape[0]
@@ -430,6 +429,7 @@ if False:
 # Find these variables in the code and change them. How do the results compare?
 # 2. In the `gym` module, there are lots of other RL challenges. One of them is called MountainCar-v0. Replace 'CartPole-v0' with 'MountainCar-v0' and run the training. 
 # Looking at the results from the training, can you guess why the particular reward system is not a good one?
+# 3. [CHALLENGE] Currently the code is not very object-oriented. Create a general class that contains this continuous Reinforcement Learning agent.
 # 3. [CHALLENGE] The source code for MountainCar-v0 has been provided in resources/mountainCar. You should be able to replace `env=gym.make('MountainCar-v0')` with 
 # `env = resources.mountainCar.MountainCarEnv()` and have this file's code run without any other modifications. Your task is to edit resources/mountainCar so that the 
 # reinforcement learner is able to make at least some headway.

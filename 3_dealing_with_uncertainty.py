@@ -190,6 +190,8 @@ if False:
     agent = qLearningAgent(universe)
     agent.runRounds(1000)
     # You'll probably see that the agent still performs the same set of actions (moving to the end and then hopping forwards and backwards), even if the reward was rather random.
+    # Try and mess around with the number of run-rounds here, you might notice that when leaning with less rounds, the average score is lower. Pay attention to the 
+    # moves the bot makes, this is due to it not having enough time to explore the extremidy of the map and score that juicy 10 points.
 
 # Let's try something even more gruelling: This time, we either get no reward 50% of the time, or full reward the other 50% of the time.
 if False:

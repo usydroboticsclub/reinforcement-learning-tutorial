@@ -2,7 +2,7 @@ import random
 import math
 
 # So far, we've only played with universes with a single agent in them. However, in real life, games might have multiple agents playing at the same time.
-# Does geinforcement learning generalise to these kinds of situations?
+# Does reinforcement learning generalise to these kinds of situations?
 
 # Let's create a universe engine for a tic-tac-toe game (except no diagonal wins! Because I don't want to bore you to death with the check-if-win-function):
 
@@ -167,8 +167,12 @@ class ticTacToeUniverse():
         self.agents[1].explorationDecayRate = math.pow(
             0.0001, 1/totalRounds)
         for roundCount in range(totalRounds):
-            shouldPrint = (roundCount %
-                           reportAfterRounds == 0) and (roundCount > 0)
+            if reportAfterRounds == 0:
+                shouldPrint = False
+                
+            else:
+                shouldPrint = (roundCount %
+                            reportAfterRounds == 0) and (roundCount > 0)
             if shouldPrint:
                 print("Currently at round {}".format(roundCount))
                 self.agents[0].printStats()

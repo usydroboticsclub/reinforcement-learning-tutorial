@@ -80,11 +80,11 @@ class reinforcementLearningAgent():
         if printMoves:
             print("This round moves:")
         while not isConcluded:  # We haven't finished yet
-            (isConcluded, immediateReward, lastMove) = self.makeMove()
+            (isConcluded, immediateReward, currentMove) = self.makeMove()
             totalReward = totalReward + immediateReward
             if (printMoves):
                 print("{}=>{}: {}".format(
-                    lastMove, self.currentLocation, totalReward))
+                    currentMove, self.currentLocation, totalReward))
         return totalReward
 
     def runRounds(self, totalRounds):

@@ -229,9 +229,8 @@ while currentRound <= totalRounds:
 
 ############# Exercises ##############
 # 1. Come up with a tile set of your own, and try it out.
-# 2. Try out alpha values of 5, 0.5, 0.05. Which one converges fastest?
-# 3. Try out discount values of 5, 0.5, 0.05. Which ones still work well?
-# 4. Try out exploration decay rates of 0.99, 0.999, 0.9999 (default was 0.999). Do we fully explore every pathway each time? Is 
+# 2. Try out discount values of 5, 0.5, 0.05. Which ones still work well?
+# 3. Try out exploration decay rates of 0.99, 0.999, 0.9999 (default was 0.999). Do we fully explore every pathway each time? Is 
 # the end result reliable enough to use each time?
-# 5. [Challenge] Create a function that calculates the number of rounds until convergence is achieved.
-# 6. [Challenge] Using the function above, create a hyperparameter tuner that finds the optimal hyperparameters for a given tileset.
+# 4. [Challenge] Create a function that calculates the number of rounds until convergence is achieved.
+# 5. [Challenge] Using the function above, create a hyperparameter tuner that finds the optimal hyperparameters for a given tileset.

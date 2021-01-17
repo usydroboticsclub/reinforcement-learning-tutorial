@@ -201,7 +201,7 @@ def chooseAction(currentState, explorationChance):
         # Random action from the environment sample space (in this case, left or right).
         return env.action_space.sample()
     else:
-        actionScores = newNeuralNetwork(currentState).cpu().data.numpy()
+        actionScores = newNeuralNetwork(currentState).data.numpy()
         # Pick the best action that our neural network has suggested
         return np.argmax(actionScores)
 
@@ -253,8 +253,9 @@ def performTraining(states, actions, rewards, nextStates, dones):
     actuallyUsedActionScores = (actionsMask * bestNewActionScores).sum(dim=-1)
     # If you want to figure out what this means, do search up one-hot functions, as they come up quite a bit in
     # discrete machine learning.
-    # the detach() is there to save your RAM, because
+    
     loss = lossFunction(actuallyUsedActionScores, target.detach())
+    # the detach() is there to save your RAM, because
     # target is attached to the original neural net it came from, which we're about to abandon anyway.
 
     # Now, run the training function!

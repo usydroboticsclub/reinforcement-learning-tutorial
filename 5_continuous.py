@@ -126,6 +126,22 @@ import numpy as np  # If you haven't used numpy before, it contains a bunch of o
 import gym
 env = gym.make('CartPole-v0')
 
+### The following snippet of code will record every 100 runs to a folder called /video in your current directory. This will free you to do other things
+# without missing out the training.
+# ~~ openAI's video recording is currently broken but they're fixing it. Please keep this falsed-out until further notice - or, if you're feeling confident, 
+# you can go to gym's folder / wrappers / monitoring / video recorder, line 303 and un-indent the line yourself :3
+if False:
+    def every100(episodeID):
+        # Only render every 100 times.
+        if episodeID % 100 == 1:
+            return True
+        else:
+            return False
+    env = gym.wrappers.Monitor(
+        env, './video/', video_callable=every100, force=True) 
+### end snippet
+
+# We now source the number of state variables and number of possible actions from the environment.
 numStateVariables = env.observation_space.shape[0]
 numActions = env.action_space.n
 
@@ -316,8 +332,7 @@ if True:
         updateHyperParameters()
     env.close()  # finish up
 
-# So it turns out that this version hasn't improved much even after 10,000 rounds. However, if we look at the output in the console, we notice that the loss is pretty low! This 
-# suggests that the neural net is working in that it's doing exactly what we told it to do. Perhaps we should change our approach.
+# So it turns out that this version hasn't improved much even after 10,000 rounds. Perhaps we should change our approach.
 
 # The version below is slightly modified so that instead of just training on the last round's data, it trains on ALL collected data, and also trains at EVERY timestep in the 
 # simulation. This gives it a lot more training time, which will hopefully produce better results.
@@ -405,6 +420,7 @@ if False:
                 oldNeuralNetwork.load_state_dict(newNeuralNetwork.state_dict())
 
         if currentRound >= 100:
+            # only keep 100 items in our last 100 rounds cache, by slicing off the first one if there are more than 100
             last100RoundsRewards = last100RoundsRewards[1:]
         last100RoundsRewards.append(thisRoundReward)
 

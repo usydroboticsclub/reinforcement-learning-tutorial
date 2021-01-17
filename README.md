@@ -7,13 +7,16 @@ By our estimates, you could take:
 - Roughly 2 days to complete all the basic exercises in each file;
 - Roughly 5 days, if you're a programming expert, to complete all the challenge exercises in each file.  
 
+## What is (and isn't) reinforcement learning?
+Reinforcement learning is a _type_ of machine learning (as opposed to prediction/classification) that allows an **agent** (e.g. a robot) to **learn** to **respond** to an **environment**. If you've taken non-reinforcement learning *machine learning* courses before, then reinforcement learning is different because it deals with actions rather than dealing with static data. This makes reinforcement learning particularly relevant to robotics, as it allows our robots to interact with their environment as opposed to just classifying or making predictions about things in the environment. 
+
 ## Requisite knowledge
 To get through this course smoothly, you should be confident with python. If you want a refresher, we've got a tutorial for you over here: https://github.com/usydroboticsclub/python 
 
 You would also benefit from:
 - Some experience with abstract problem solving
 - The ability to read code and understand it, regardless of how much/little commenting there is
-- A basic understanding of neural networks
+- A conceptual understanding of neural networks
 But give it a go! We trust in your ability to learn :)
 
 ## Where to next?

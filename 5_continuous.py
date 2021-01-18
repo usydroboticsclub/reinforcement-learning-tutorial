@@ -125,6 +125,7 @@ import numpy as np  # If you haven't used numpy before, it contains a bunch of o
 # Also install the openAI gym `pip install gym`, which contains a bunch of fun machine learning tasks, of which we will be using a stick-balancing exercise:
 import gym
 env = gym.make('CartPole-v0')
+# If you're on the latest Mac OSX (Big Sur), you'll also need to run `pip install pyglet==1.5.11` or openAI gym will throw an error.
 
 ### The following snippet of code will record every 100 runs to a folder called /video in your current directory. This will free you to do other things
 # without missing out the training.

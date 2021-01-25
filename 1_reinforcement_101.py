@@ -25,7 +25,7 @@ agentMemory = []
 # gained from moving left.
 
 # (7/25) So, for each tile, and each possible action, we remember an 'expected reward'. For this simple game, we can layout all the states:
-# [note: technically we're storing an expected Return; which is a summed, discounted reward over the entire single run of the map. An entire 
+# [note: technically we're storing an expected Return; which is a discounted sum of the rewards over the entire single run of the map. An entire 
 # single run of the map is commonly referred to as an Episode.]
 agentMemory = [
     {

@@ -20,8 +20,9 @@ You would also benefit from:
 But give it a go! We trust in your ability to learn :)
 
 ## Where to next?
-If you've finished this tutorial set without too many problems, we invite you to check out this resource: https://towardsdatascience.com/qrash-course-ii-from-q-learning-to-gradient-policy-actor-critic-in-12-minutes-8e8b47129c8c which will take you to the next step towards the state-of-the-art in machine learning.
+Jay Zhang found this excellent Deep RL course available for free from UC Berkeley: http://rail.eecs.berkeley.edu/deeprlcourse/ It's a natural follow on from the current course, and is UC Berkeley standard; and completely free!
 
+In case they've taken it down because it's too good, we'll hopefully have kept a cached version of the slides and exercises somewhere, if Steven ever gets around to it.
 ## Feedback
 Please send feedback to usydrobotics@gmail.com, or if you want to contact the authors directly, you can reach out to steeven.liu2@gmail.com
 

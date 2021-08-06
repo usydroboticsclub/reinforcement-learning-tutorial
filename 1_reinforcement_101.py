@@ -2,10 +2,10 @@ import random
 
 # (1/25) Imagine there's a robotic agent in a room with some treasure. (In a real system, the 'room' is all the possible states
 # that a robot could be in; and the treasure is the value of the states.) Given the treasure map, can we have the agent
-# learn what to do? Can we make the agent learn how to adapt to uncertainty, or even other agents?
+# learn what to do without explicitly programming it? Can we make the agent learn how to adapt to uncertainty, or even other agents?
 
 # (2/25) Let's start with the basics. Here's a treasure map which is a long line, with some rooms having a score in them.
-# the agent could hover around the middle for a low score or go for the ends...
+# The agent starts in the centre, where the 1 is. 
 tileScores = [10, 0, 0, 0, 0, 1, 0, 0, 0, 0, 10]
 
 # (3/25) The agent starts at the centre where the 1 is, and the agent has
@@ -13,18 +13,21 @@ agentMovesTotal = 6
 # moves in total. Every time the agent moves, it will get the score in the room it moves to. (It can revisit rooms.)
 # The agent can't hang around in a room however, it has to move each time.
 
+# (4/25) What are some strategies you could code for the agent? You could tell it to move to either end; or you could tell the agent to
+# hover around the centre for that 1 reward. Your strategy would probably change if you had more or fewer moves (since you can't reach 
+# the end) - and we want our robot to be able to adapt! This is where Reinforcement learning comes in.
 
-# (4/25) How do we get the agent to learn? Well, we can tell the agent to run the map a lot of times and remember what
-# actions have what outcome. Let's start by giving the agent a memory:
+# (5/25) To learn, the agent will run lots of experiments on the map, and remember something about its behaviour that constitutes a strategy. 
+# Let's start by giving the agent a memory:
 agentMemory = []
-# (5/25) What shall we store in the memory? Well, for each room, we have a few actions: move left, or move right. We can
-# store the expected outcome of either moving left or right.
+# What shall we store in the memory? Well, for each room, we have a few actions: move left, or move right. We can
+# store the expected future reward of either moving left or right.
 
-# (6/25) But wait! If the agent starts from the centre and moves left, then it will get 0 score immediately, but if it keeps moving
-# it could get up to 10 score. So the score for the tile to the left should be more than 0, because there is a reward to be
-# gained from moving left.
+# (6/25) What do we mean by expected future reward? If the agent starts from the centre and moves left, then it will get 0 score immediately, 
+# but if it keeps moving it could get up to 10 score. So the score for the tile to the left should be more than 0, even though the immediate 
+# reward is 0, because there is a reward to be gained from moving left. We'll discuss how to calculate this expected future reward in a later step.
 
-# (7/25) So, for each tile, and each possible action, we remember an 'expected reward'. For this simple game, we can layout all the states:
+# (7/25) For this simple game, we can layout all the states:
 # [note: technically we're storing an expected Return; which is a discounted sum of the rewards over the entire single run of the map. An entire 
 # single run of the map is commonly referred to as an Episode.]
 agentMemory = [

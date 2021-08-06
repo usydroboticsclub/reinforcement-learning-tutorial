@@ -17,6 +17,7 @@ You would also benefit from:
 - Some experience with abstract problem solving
 - The ability to read code and understand it, regardless of how much/little commenting there is
 - A conceptual understanding of neural networks
+
 But give it a go! We trust in your ability to learn :)
 
 ## Where to next?

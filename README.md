@@ -21,7 +21,9 @@ You would also benefit from:
 But give it a go! We trust in your ability to learn :)
 
 ## Where to next?
-Jay Zhang found this excellent Deep RL course available for free from UC Berkeley: http://rail.eecs.berkeley.edu/deeprlcourse/ It's a natural follow on from the current course, and is UC Berkeley standard; and completely free!
+Jay Zhang found this excellent Deep RL course available for free from UC Berkeley: http://rail.eecs.berkeley.edu/deeprlcourse/ 
+
+It's a natural follow on from the current course, and is UC Berkeley standard; and completely free!
 
 In case they've taken it down because it's too good, we'll hopefully have kept a cached version of the slides and exercises somewhere, if Steven ever gets around to it.
 ## Feedback

@@ -30,3 +30,6 @@ In case they've taken it down because it's too good, we'll hopefully have kept a
 Please send feedback to usydrobotics@gmail.com, or if you want to contact the authors directly, you can reach out to steeven.liu2@gmail.com
 
 Happy learning!
+
+## Understanding Reinforcement Workshop
+https://docs.google.com/document/d/1HQN_Bs3F-joOqkXGYs1Y0flcyW4dkaAsYfIs2y7-5_Q/edit?usp=sharing
